@@ -46,11 +46,13 @@
 					"</td><td>"+
 					"<form action=Edit method=get><input name=id value="+cont.getId()+" hidden>"+
 					"<input class=btn btn-primary type=submit value=Edit></form>"
-					+"</td><td>"+
-					"<form action=Delete method=get onsubmit=>"+
-					"<input name=id value="+cont.getId()+" hidden>"+
-					"<input class=btn btn-primary type=submit value=Delete ></form>"
-					+"</td><tr>");
+					+"</td><td>");
+			%>
+					<form action="Delete" method="get" onSubmit="return deleteMsg()">
+					<input name="id" value=<%=cont.getId()%> hidden>
+					<input class="btn btn-primary" type="submit" value="Delete" ></form>
+					</td><tr>
+		<%
 		}
 	%>
 	</table>

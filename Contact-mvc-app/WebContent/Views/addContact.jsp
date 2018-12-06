@@ -19,7 +19,7 @@
 	<% 
 		UUID uid = UUID.fromString("38400000-8cf0-11bd-b23e-10b96e4ef00d");
 		String id=uid.randomUUID().toString();
-		String name,email;
+		String name,email;	
 		Contacts contact=(Contacts)request.getAttribute("contact");
 		String errorMessage=(String)request.getAttribute("errMsg");
 		String[] stateList=new StateService().getStates();
